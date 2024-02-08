@@ -10,6 +10,15 @@
 
 }
 
+span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
 figure {
     display: block;
     position: absolute;
@@ -39,6 +48,7 @@ figure {
 .back {
     transform: rotateY(180deg) translateZ(150px);
     background-color: green;
+    white-space: wrap;
 }
 
 .top { 
@@ -77,11 +87,11 @@ figure::before, figure::after {
 }
 
 figure::before {
-    background: radial-gradient(top left, rgba(0,0,0,0.5), #000);
+    background-image: radial-gradient(top left, rgba(0,0,0,0.5), #000);
 }
 
 figure::after {
-    background: radial-gradient(top right, rgba(0,0,0,0.5), #000);
+    background-image: radial-gradient(top right, rgba(0,0,0,0.5), #000);
 }
 
 .front::before {

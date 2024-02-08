@@ -1,0 +1,92 @@
+body {
+    height: 100%;
+}
+
+:root * {
+    
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.progress {
+    height: 3px;
+    width: 0;
+    background-color: blueviolet;
+    animation: progress 10s linear infinite;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.stage {
+    width: 300px;
+    height: 300px;
+    -webkit-perspective: 1600px;
+    -webkit-perspective-origin: 50% -240px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+figure {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    transform-origin: 50% 50% 0;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+  
+.cube {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: rotate 10s linear infinite;
+    -webkit-animation-play-state: paused;
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+}
+
+.front {
+    transform: translateZ(150px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);  
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: black;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.5);
+}
+
+
