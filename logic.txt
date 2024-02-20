@@ -1,0 +1,14 @@
+1. Animation to scroll the image track and have each image move
+in the direction of the scroll.
+
+2. Key to understanding the animation: Calculate how much to the left 
+or to the right the cursor has moved, and adjusting the img position
+accordingly.
+
+3. By the time the track moves 100%, the cursor has travelled 50% of the
+screen
+
+4. Need to find the percentage of the max possible movement moved
+so divide e.clientX (calculated on each movement) / 50% of the window width
+
+5. 

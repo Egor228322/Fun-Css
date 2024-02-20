@@ -3,88 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sliding Counter</title>
-    <style>
-      .counter-container {
-        position: relative;
-        overflow: hidden;
-        width: 100px; /* Adjust width as needed */
-        height: 60px; /* Adjust height as needed */
-        font-size: 36px; /* Adjust font size as needed */
-      }
-      .counter {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        animation: slideDown 0.5s forwards;
-      }
-      @keyframes slideDown {
-        0% {
-          transform: translateY(-100%);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      .out {
-        animation: slideUp 0.5s forwards;
-      }
-      @keyframes slideUp {
-        0% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(100%);
-          opacity: 0;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Track</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="counter-container">
-      <div class="counter">0</div>
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
+      <img class="image" src="some dude.jpg" alt="neom" draggable="false" />
     </div>
-    <button class="increment">Increment</button>
-    <button class="decrement">Decrement</button>
-
-    <script>
-      const btnInc = document.querySelector(".increment");
-      const btnDec = document.querySelector(".decrement");
-      const counterContainer = document.querySelector(".counter-container");
-
-      let current = 0;
-
-      function onClick(payload) {
-        const newElement = document.createElement("div");
-        newElement.classList.add("counter");
-        newElement.innerText = current + payload;
-
-        counterContainer.appendChild(newElement);
-
-        setTimeout(() => {
-          counterContainer
-            .querySelector(".counter:first-child")
-            .classList.add("out");
-        }, 10);
-
-        setTimeout(() => {
-          counterContainer.querySelector(".counter:first-child").remove();
-        }, 510);
-
-        current += payload;
-      }
-
-      btnInc.addEventListener("click", () => onClick(1));
-      btnDec.addEventListener("click", () => onClick(-1));
-    </script>
   </body>
 </html>
