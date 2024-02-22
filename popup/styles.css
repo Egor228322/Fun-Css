@@ -8,6 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: black;
+  position: relative;
 }
 
 .image-container {
@@ -16,7 +17,7 @@ body {
   width: 100%;
   height: 100%;
   transition: all 0.5s ease;
-  z-index: 3;
+  z-index: 2;
 }
 
 .image-neom {
@@ -26,9 +27,10 @@ body {
 }
 
 .menu-container {
-  position: absolute;
+  z-index: 3;
   width: auto;
   height: auto;
+  position: absolute;
   bottom: 15%;
   left: 50%;
 }
@@ -36,8 +38,8 @@ body {
 .btn-menu {
   width: 75px;
   height: 75px;
-  background-color: bisque;
   border-radius: 50%;
+  background-color: bisque;
   cursor: pointer;
 }
 
@@ -52,6 +54,7 @@ body {
 .burger {
   width: 42px;
   height: 42px;
+  opacity: 0;
 }
 
 .X {
@@ -101,7 +104,12 @@ body {
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
-  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40vh;
+  width: 100%;
+  z-index: 1;
 }
 
 .feature {
@@ -118,6 +126,7 @@ body {
   color: whitesmoke;
   margin-bottom: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .feature-image {
