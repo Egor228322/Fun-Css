@@ -1,0 +1,70 @@
+body {
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 62.5vw;
+  height: 75vh;
+}
+
+.cards {
+  background-color: rgba(255, 255, 255, 0.35);
+  height: 100%;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: calc(100% / 3);
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.card-content {
+  background-color: red;
+  width: 100px;
+  height: 200px;
+}
+
+div[data-content="1"] {
+  perspective-origin: 200px -100px;
+  transform: rotateY(30deg);
+}
+
+div[data-content="2"] {
+  height: 70%;
+  width: 90%;
+}
+
+div[data-content="3"] {
+  perspective-origin: -200px -100px;
+  transform: rotateY(-30deg);
+}
+
+.card-1 {
+}
+
+.card-2 {
+  transform: translateX(100%);
+}
+
+.card-3 {
+  transform: translateX(200%);
+}
+
+.card-4 {
+  transform: translateX(100%);
+}

@@ -1,0 +1,43 @@
+body {
+  height: 200vh;
+  background-color: black;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container h2:not(:last-child) {
+  margin-bottom: -35px;
+}
+
+h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 3px;
+  transition: all 0.1s;
+}
+
+h2[id="1"] {
+  transform: translateX(calc((var(--scroll-y) * -1) / 5));
+}
+
+h2[id="2"] {
+  transform: translateX(calc(var(--scroll-y) / 10));
+}
+
+h2[id="3"] {
+  transform: translateX(calc(var(--scroll-y) / 2.5));
+}
